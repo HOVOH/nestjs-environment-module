@@ -1,0 +1,10 @@
+{
+  "name": "@hovoh/nestjs-environment-module",
+  "version": "1.0.0",
+  "description": "NestJs module to load a .env file or process env variables",
+  "author": "HOVOH",
+  "dependencies": {
+    "@nestjs/common": "^7.6.13",
+    "dotenv": "^8.2.0"
+  }
+}
