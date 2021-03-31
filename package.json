@@ -3,8 +3,10 @@
   "version": "1.0.1",
   "description": "NestJs module to load a .env file or process env variables",
   "author": "HOVOH",
+  "main": "dist/index.js",
   "scripts": {
-    "preparePublish": "tsc && rollup -c"
+    "build": "npm run clean && tsc -p .",
+    "clean": "rimraf dist && rimraf index.js && rimraf index.d.ts"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.13",
@@ -12,14 +14,9 @@
     "rxjs": "^6.6.7"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
     "@types/node": "^14.14.37",
-    "rollup": "^2.44.0",
-    "rollup-plugin-dts": "^3.0.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
-  },
-  "files": [
-    "index.js",
-    "index.d.ts"
-  ]
+  }
 }
