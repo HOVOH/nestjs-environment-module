@@ -1,12 +1,12 @@
 {
   "name": "@hovoh/nestjs-environment-module",
   "version": "1.0.2",
-  "description": "NestJs module to load a .env file or process env variables",
+  "description": "NestJs module to load a .env file and merge process env variables into a service",
   "author": "HOVOH",
   "main": "dist/index.js",
   "scripts": {
     "build": "npm run clean && tsc -p .",
-    "clean": "rimraf dist && rimraf index.js && rimraf index.d.ts"
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.13",
