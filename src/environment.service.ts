@@ -10,11 +10,15 @@ export class EnvironmentService<T> {
   }
 
   load() {
-    const result = dotenv.config();
-    if (result.error) {
-      throw result.error;
+    try{
+      const result = dotenv.config();
+      if (result.error) {
+        throw result.error;
+      }
+      this._env = (Object.assign(result.parsed, process.env) as unknown) as T;
+    } catch (ignored){
+      this._env = process.env as unknown as T;
     }
-    this._env = (Object.assign(result.parsed, process.env) as unknown) as T;
   }
 
   get env() {
