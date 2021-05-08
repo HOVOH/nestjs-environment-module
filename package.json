@@ -1,6 +1,6 @@
 {
   "name": "@hovoh/nestjs-environment-module",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "NestJs module to load a .env file and merge process env variables into a service",
   "author": "HOVOH",
   "main": "dist/index.js",
